@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  tag: stable
+
+ingress:
+  enabled: true
+  annotations: 
+    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
+    kubernetes.io/ingress.allow-http: "false"
+  path: /
+  hosts:
+    - cluster-51.pncapix.com
+  tls: 
+    - secretName: cluster-51.pncapix.com
+      hosts:
+        - cluster-51.pncapix.com

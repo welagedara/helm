@@ -52,6 +52,14 @@ To check nginx version
 ```
 kubectl exec POD_NAME -- nginx -v
 ```
+To check revison number 
+```
+helm list -a
+```
+or 
+```
+helm history HELM_NAME
+```
 To rollback
 ```
 helm rollback HELM_NAME REVISION_NUMBER
@@ -61,9 +69,41 @@ Example:
 helm rollback needled-hog 1
 ```
 
+## Upgrade and Rollback using an external yaml
+
+Install the app
+```
+helm install -f ./hello-world-helm.yaml ./hello-world
+``` 
+Upgrade the app
+```
+helm upgrade -f ./hello-world-helm-upgraded.yaml HELM_NAME ./hello-world
+```
+To check nginx version
+```
+kubectl exec POD_NAME -- nginx -v
+```
+To check revison number 
+```
+helm list -a
+```
+or 
+```
+helm history HELM_NAME
+```
+To rollback
+```
+helm rollback HELM_NAME REVISION_NUMBER
+```
+Example:
+```
+helm rollback early-ladybird 1
+```
+
 ## Releases
 
   - V1.0.0.RELEASE (hello-word helm chart is completed)
+  - V1.0.1.RELEASE (hello-word helm chart with rollbacks)
 
 ## References
 
