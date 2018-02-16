@@ -3,9 +3,9 @@ entries:
   hello-world:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-02-16T15:16:54.64652366-05:00
+    created: 2018-02-16T15:21:12.588080908-05:00
     description: A Helm chart for Kubernetes
-    digest: 98dd60c7bf2b41393ff46324b741a3f20cded9bc41947e197bc31897f887309c
+    digest: 3f9798599928da890ebfc8b8409e47430cfc2dd6c42662932933c15971b3b5d0
     maintainers:
     - email: pubuduwelagedara@gmail.com
       name: Pubudu Welagedara
@@ -15,7 +15,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-02-16T15:16:54.64599829-05:00
+    created: 2018-02-16T15:21:12.587737367-05:00
     description: A Helm chart for Kubernetes
     digest: 3a3fc00726640c66ecc01c69c0c49c770b5401b261c003fd81d4ef494700e8b8
     maintainers:
@@ -25,4 +25,4 @@ entries:
     urls:
     - hello-world-0.1.0.tgz
     version: 0.1.0
-generated: 2018-02-16T15:16:54.644516447-05:00
+generated: 2018-02-16T15:21:12.586878888-05:00
