@@ -104,6 +104,7 @@ helm rollback early-ladybird 1
 
   - V1.0.0.RELEASE (hello-word helm chart is completed)
   - V1.0.1.RELEASE (hello-word helm chart with rollbacks)
+  - V2.0.0.RELEASE (added mysql)
 
 ## References
 
