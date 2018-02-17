@@ -6,14 +6,25 @@ Install Jenkins without any modifications. By default LoadBalancer configuration
 ```
 helm install stable/jenkins
 ```
-To set ServiceType use --set flag. 
+To set ServiceType use --set flag. The Helm Repo wants you to set this to ClusterIP if an Ingress is there. But did not seem to work with the Ingress here.
 ```
-helm install --set Master.ServiceType=ClusterIP stable/jenkins
+helm install stable/jenkins
 ```
 
 ## Enabling TLS through an Ingress
 
-
+Install Jenkins behing a ClusterIP.
+```
+helm install --set Master.ServiceType=NodePort --name jenkins stable/jenkins
+```
+Service name will be jenkins-jenkins in this example. Deploy the Ingress using the following.
+```
+kubectl create -f ./jenkins/jenkins-ingress-tls.yaml
+```
+To wait till the Ingress is up
+```
+while true; do kubectl get ingresses; sleep 2; done
+```
 ## References
 
   - [Croc Hunter](https://github.com/lachie83/croc-hunter)

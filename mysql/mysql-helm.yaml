@@ -1,0 +1,21 @@
+## Specify password for root user
+##
+## Default: random 10 character string
+mysqlRootPassword: root
+
+## Create a database user
+##
+mysqlUser: username
+mysqlPassword: password
+
+## Create a database
+##
+mysqlDatabase: microservice
+
+## Configure the service
+## ref: http://kubernetes.io/docs/user-guide/services/
+service:
+  ## Specify a service type
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types
+  type: LoadBalancer
+  port: 3306
