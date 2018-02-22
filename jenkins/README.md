@@ -13,7 +13,7 @@ helm install stable/jenkins
 
 ## Enabling TLS through an Ingress
 
-Install Jenkins behing a ClusterIP.
+Install Jenkins behind a NodePort.
 ```
 helm install --set Master.ServiceType=NodePort --name jenkins stable/jenkins
 ```
